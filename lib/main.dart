@@ -1,3 +1,4 @@
+import 'package:besa_flutter/globals.dart';
 import 'package:flutter/material.dart';
 import './pages/checkBalance.dart';
 import 'pages/depositMoney.dart';
@@ -39,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
     String password = _passwordController.text;
 
     // Replace with your own logic
-    if (username == 'admin' && password == 'password') {
+    if (username == globalUsername && password == globalPassword) {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const HomePage()),
